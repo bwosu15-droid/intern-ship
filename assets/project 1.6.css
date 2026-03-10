@@ -1,0 +1,208 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --bg-dark:#000000;
+  --bg-green:#303B30;
+  --neon:#00ff00;
+  --text:#f2f2f2;
+  --silver:#ededed;
+  --line:rgba(255,255,255,0.82);
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  line-height:1.9;
+  min-height:100vh;
+  background:black
+}
+
+.page{
+  width:min(1120px, 92%);
+  margin:0 auto;
+  padding:58px 0 70px;
+}
+
+/* HEADER */
+.hero{
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.hero h1{
+  font-family:'Orbitron',sans-serif;
+  font-size:clamp(2.2rem, 3.6vw, 4.3rem);
+  color:var(--silver);
+  letter-spacing:1px;
+  text-shadow:
+    0 0 1px rgba(255,255,255,0.7),
+    0 0 8px rgba(255,255,255,0.05);
+}
+
+.hero h1 span{
+  color:#00ff00;
+  text-shadow:0 0 10px rgba(0,255,60,0.18);
+}
+
+.title-line{
+  width:360px;
+  max-width:80%;
+  height:1px;
+  background:var(--line);
+  margin:14px auto 0;
+}
+
+/* CONTENT */
+.conclusion-content{
+  margin-top:42px;
+}
+
+.conclusion-content p{
+  font-size:clamp(1.05rem, 1.45vw, 1.35rem);
+  color:#f1f1f1;
+  margin-bottom:52px;
+  max-width:1080px;
+}
+
+/* BUTTON CONTAINER */
+
+.conclusion-buttons{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:60px;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+/* GLASS BUTTON */
+
+.glass-btn{
+
+position:relative;
+
+padding:14px 28px;
+
+font-size:16px;
+
+font-weight:500;
+
+text-decoration:none;
+
+color:#ffffff;
+
+border-radius:12px;
+
+background:rgba(255,255,255,0.08);
+
+border:1px solid rgba(255,255,255,0.25);
+
+backdrop-filter:blur(10px);
+
+transition:all 0.35s ease;
+
+overflow:hidden;
+
+}
+
+
+/* GLOW EFFECT */
+
+.glass-btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(0,255,100,0.4),
+transparent
+);
+
+transition:0.5s;
+
+}
+
+
+/* HOVER EFFECT */
+
+.glass-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 8px 20px rgba(0,255,80,0.25);
+
+border-color:#00ff3c;
+
+}
+
+
+/* GLOW SWIPE */
+
+.glass-btn:hover::before{
+
+left:100%;
+
+}
+
+
+/* SPECIFIC BUTTON COLORS */
+
+.back-btn{
+
+color:#d9d9d9;
+
+}
+
+.next-btn{
+
+color:#00ff3c;
+
+border-color:#00ff3c;
+
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .page{
+    width:min(92%, 100%);
+    padding-top:42px;
+  }
+
+  .conclusion-content p{
+    margin-bottom:36px;
+  }
+}
+
+@media (max-width: 480px){
+  .hero h1{
+    letter-spacing:0.5px;
+  }
+
+  .conclusion-content p{
+    font-size:1rem;
+    line-height:1.8;
+  }
+}

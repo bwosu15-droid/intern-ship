@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #f2f2f2;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 80px;
+}
+
+.design-section {
+  width: 100%;
+}
+
+.design-section h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 34px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.green {
+  color: #00ff00;
+}
+
+.intro-text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #e6e6e6;
+  max-width: 980px;
+  margin-bottom: 34px;
+}
+
+.sub-section {
+  margin-bottom: 54px;
+}
+
+.sub-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #f2f2f2;
+}
+
+.sub-section p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #e6e6e6;
+}
+
+.sub-section ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.sub-section ul li {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #e6e6e6;
+}
+
+.visual-designs {
+  margin-top: 10px;
+}
+
+.visual-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+.label {
+  min-width: 120px;
+  font-size: 14px;
+  color: #f2f2f2;
+}
+
+.image-card {
+  background: #efefef;
+  border: 3px solid #00ff33;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* SPECIFIC IMAGE BOXES */
+
+.palette-card {
+  width: 360px;
+  min-height: 150px;
+}
+
+.typography-card {
+  width: 420px;
+  min-height: 130px;
+}
+
+.iconography-card {
+  width: 420px;
+  min-height: 120px;
+}
+
+.images-card {
+  width: 520px;
+  min-height: 210px;
+}
+
+/* BEFORE AND AFTER */
+
+.before-after-card {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  background: #efefef;
+  border: 2px solid #00ff00;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.before-after-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+/* FINAL SCREENS */
+
+.final-screens h2 {
+  margin-bottom: 26px;
+}
+
+.screen-columns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+
+.screen-card {
+  background: #efefef;
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.screen-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+.tall-left {
+  width: 360px;
+}
+
+.tall-right {
+  width: 270px;
+}
+
+/* OPTIONAL SIMPLE HOVER LIKE PREVIOUS CHAT */
+
+.image-card,
+.before-after-card,
+.screen-card {
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover,
+.before-after-card:hover,
+.screen-card:hover {
+  transform: scale(1.02);
+}
+
+/* BUTTON CONTAINER */
+
+.conclusion-buttons{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:60px;
+gap:20px;
+flex-wrap:wrap;
+}
+
+
+/* GLASS BUTTON */
+
+.glass-btn{
+position:relative;
+padding:14px 28px;
+font-size:16px;
+font-weight:500;
+text-decoration:none;
+color:#ffffff;
+border-radius:12px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.25);
+backdrop-filter:blur(10px);
+transition:all 0.35s ease;
+overflow:hidden;
+}
+
+
+/* GLOW EFFECT */
+
+.glass-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(0,255,100,0.4),
+transparent
+);
+transition:0.5s;
+}
+
+/* HOVER EFFECT */
+
+.glass-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 20px rgba(0,255,80,0.25);
+border-color:#00ff3c;
+}
+
+
+/* GLOW SWIPE */
+
+.glass-btn:hover::before{
+left:100%;
+}
+
+
+/* SPECIFIC BUTTON COLORS */
+
+.back-btn{
+color:#d9d9d9;
+}
+
+.next-btn{
+color:#00ff3c;
+border-color:#00ff3c;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .container {
+    width: 94%;
+    padding: 18px 8px 60px;
+  }
+
+  .design-section h1 {
+    font-size: 24px;
+  }
+
+  .sub-section h2 {
+    font-size: 18px;
+  }
+
+  .intro-text,
+  .sub-section p,
+  .sub-section ul li,
+  .label {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .label {
+    min-width: auto;
+    text-align: center;
+  }
+
+  .palette-card,
+  .typography-card,
+  .iconography-card,
+  .images-card,
+  .before-after-card,
+  .tall-left,
+  .tall-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .visual-row {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .screen-columns {
+    gap: 18px;
+  }
+}

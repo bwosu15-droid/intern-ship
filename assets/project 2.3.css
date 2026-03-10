@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #e6e6e6;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 60px 20px 90px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  margin-bottom: 18px;
+}
+
+.green {
+  color: #00ff00;
+}
+
+.top-line {
+  width: 40%;
+  margin: 0 auto;
+  border-top: 2px solid #d4d4d4;
+}
+
+.conclusion-text {
+  width: 100%;
+}
+
+.conclusion-text p {
+  font-size: 20px;
+  line-height: 2.1;
+  color: #ededed;
+  margin-bottom: 28px;
+}
+
+/* BUTTON CONTAINER */
+
+.conclusion-buttons{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:60px;
+gap:20px;
+flex-wrap:wrap;
+}
+
+
+/* GLASS BUTTON */
+
+.glass-btn{
+position:relative;
+padding:14px 28px;
+font-size:16px;
+font-weight:500;
+text-decoration:none;
+color:#ffffff;
+border-radius:12px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.25);
+backdrop-filter:blur(10px);
+transition:all 0.35s ease;
+overflow:hidden;
+}
+
+
+/* GLOW EFFECT */
+
+.glass-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(0,255,100,0.4),
+transparent
+);
+transition:0.5s;
+}
+
+/* HOVER EFFECT */
+
+.glass-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 20px rgba(0,255,80,0.25);
+border-color:#00ff3c;
+}
+
+
+/* GLOW SWIPE */
+
+.glass-btn:hover::before{
+left:100%;
+}
+
+
+/* SPECIFIC BUTTON COLORS */
+
+.back-btn{
+color:#d9d9d9;
+}
+
+.next-btn{
+color:#00ff3c;
+border-color:#00ff3c;
+}
+
+
+@media (max-width: 1100px) {
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .conclusion-text p {
+    font-size: 24px;
+    line-height: 1.9;
+  }
+
+  .top-line {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 92%;
+    padding: 40px 12px 60px;
+  }
+
+  .hero {
+    margin-bottom: 50px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+
+  .top-line {
+    width: 85%;
+  }
+
+  .conclusion-text p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+}
